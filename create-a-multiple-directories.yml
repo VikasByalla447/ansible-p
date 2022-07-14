@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+  - name: creating multiple directories at a time
+    file:
+      path: /opt/{{item}}
+      state: directory
+    with_items:
+
+          - file1
+          - file2
+          - file3
+

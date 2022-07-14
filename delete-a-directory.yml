@@ -1,0 +1,8 @@
+---
+- hosts: all
+  tasks:
+    - name: deleting a directory
+      file:
+        path: /opt/thalapathy
+        state: absent
+

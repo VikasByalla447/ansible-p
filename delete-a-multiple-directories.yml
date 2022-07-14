@@ -1,0 +1,12 @@
+---
+- hosts: all
+  tasks:
+  - name: deleting multiple directories at a time
+    file:
+      path: /opt/{{item}}
+      state: absent
+    with_items:
+          - file1
+          - file2
+          - file3
+

@@ -1,0 +1,11 @@
+---
+- hosts: all
+  tasks:
+  - name: deleting  multiple files at a time
+    file:
+      path: /opt/{{item}}
+      state: absent
+    with_items:
+          - sum.java
+          - name.all
+          - data.state
